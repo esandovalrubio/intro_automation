@@ -1,0 +1,74 @@
+{
+  "id": "d18530cd-bd4e-43aa-b24b-4ef505afb313",
+  "version": "2.0",
+  "name": "Consultar información acerca de Songs by Sinatra",
+  "url": "http://songs-by-sinatra.herokuapp.com",
+  "tests": [{
+    "id": "add22df8-bceb-4711-80ef-6ca01737dfe6",
+    "name": "Consultar información acerca de Songs by Sinatra",
+    "commands": [{
+      "id": "99dc55b8-363c-45d6-97a9-20e0fbe2784c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30b75ae5-6324-4ff7-a00c-3de766ff9174",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30ac9f76-c052-4e75-91cb-4dd74e3866ba",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=About",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca3a465a-92c3-448e-a445-d21a9b7703a0",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//img[@src=\"/images/sinatra.jpg\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c93085b-b1c4-4a89-833a-5780d214de74",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=About",
+      "targets": [
+        ["linkText=About", "linkText"],
+        ["css=li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'About')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/about')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'About')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac33cf12-773d-45dc-8926-7d5d616e6ee3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=/html/body/section/p",
+      "targets": [
+        ["css=p", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'This site is a demonstration of how to build a website using Sinatra.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "5fe082f5-ed72-4558-bc88-590dc2566e94",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["add22df8-bceb-4711-80ef-6ca01737dfe6"]
+  }],
+  "urls": ["http://songs-by-sinatra.herokuapp.com/"],
+  "plugins": []
+}
